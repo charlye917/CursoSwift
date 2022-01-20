@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FrC-sU-r3Z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mi titulo-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwM-QE-pPw">
+                                <rect key="frame" x="140" y="432.5" width="134" height="31"/>
+                                <accessibility key="accessibilityConfiguration" identifier="enviar"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Enviar Parametro"/>
+                                <connections>
+                                    <segue destination="bmp-ND-n29" kind="show" identifier="enviar" id="seX-y3-bCo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OwM-QE-pPw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A7L-od-PRM"/>
+                            <constraint firstItem="OwM-QE-pPw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WpV-rx-H10"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mi titulo" id="Mlj-8W-b8j"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.1739130434785" y="116.51785714285714"/>
+        </scene>
+        <!--Segunda Vista-->
+        <scene sceneID="FGB-G2-3Bb">
+            <objects>
+                <viewController id="bmp-ND-n29" customClass="SegundoController" customModule="NavigationStoryboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EdJ-0k-94G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBc-do-Ie5">
+                                <rect key="frame" x="174" y="433" width="66" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRt-ew-XD5">
+                                <rect key="frame" x="175" y="679" width="96" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="REGRESAR"/>
+                                <connections>
+                                    <action selector="regresar:" destination="bmp-ND-n29" eventType="touchUpInside" id="GOl-yG-nvc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y1f-PL-BOy"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="WBc-do-Ie5" firstAttribute="centerY" secondItem="EdJ-0k-94G" secondAttribute="centerY" id="4Js-6R-Ouh"/>
+                            <constraint firstItem="WBc-do-Ie5" firstAttribute="centerX" secondItem="EdJ-0k-94G" secondAttribute="centerX" id="MV6-kr-JSf"/>
+                            <constraint firstItem="aRt-ew-XD5" firstAttribute="top" secondItem="WBc-do-Ie5" secondAttribute="bottom" constant="216" id="Yqg-Ji-2fA"/>
+                            <constraint firstItem="Y1f-PL-BOy" firstAttribute="trailing" secondItem="aRt-ew-XD5" secondAttribute="trailing" constant="143" id="fEy-77-UwY"/>
+                            <constraint firstItem="aRt-ew-XD5" firstAttribute="leading" secondItem="Y1f-PL-BOy" secondAttribute="leading" constant="175" id="uT2-Vz-jmc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Segunda Vista" largeTitleDisplayMode="always" id="xVf-42-AeT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="0PL-qY-ZMb">
+                            <connections>
+                                <segue destination="kjm-SB-M6u" kind="show" id="TbK-Wv-1Tq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="texto" destination="WBc-do-Ie5" id="dMg-GN-Ed3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cOt-DT-uIt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2955.072463768116" y="116.51785714285714"/>
+        </scene>
+        <!--Tercera vista-->
+        <scene sceneID="Qr6-Na-jvc">
+            <objects>
+                <viewController id="kjm-SB-M6u" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tl0-IV-ESm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddH-BP-Xu8">
+                                <rect key="frame" x="139.5" y="432.5" width="135" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Regresar al inicio">
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Him-Zf-fb7" kind="unwind" unwindAction="regresarIncioWithSegue:" id="Rtc-CN-Im2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I1D-yg-bQ8"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="ddH-BP-Xu8" firstAttribute="centerY" secondItem="Tl0-IV-ESm" secondAttribute="centerY" id="TYO-aS-mow"/>
+                            <constraint firstItem="ddH-BP-Xu8" firstAttribute="centerX" secondItem="Tl0-IV-ESm" secondAttribute="centerX" id="nOU-pf-DU2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tercera vista" id="qXO-MM-HDp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vhg-aP-8TJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Him-Zf-fb7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3973.913043478261" y="116.51785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yAX-G3-w1f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2wC-CR-rNN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" badgeValue="2" selectedImage="homekit" catalog="system" id="iW1-fw-ien">
+                        <color key="badgeColor" systemColor="linkColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="laJ-lX-GJ6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e9e-VW-QyO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wNj-Sg-oqG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="116.51785714285714"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="97C-1X-gZE">
+            <objects>
+                <viewController id="eAg-Tx-B1a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ETc-vw-Jui">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2u4-E8-kHv"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="magnifyingglass" catalog="system" id="M1X-Ov-Xtu">
+                        <color key="badgeColor" systemColor="linkColor"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5GD-Ln-HqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="902"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ruC-W2-xWM">
+            <objects>
+                <viewController id="NX2-PQ-i9B" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9wm-I6-W1v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vQl-rd-4Cv"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="moon" catalog="system" id="Yfe-Cv-EBb">
+                        <color key="badgeColor" systemColor="linkColor"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xK-cK-Jwm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="848"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Lj1-yl-iFb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FrC-sU-r3Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OeU-bY-gBw">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2wC-CR-rNN" kind="relationship" relationship="viewControllers" id="B95-be-taR"/>
+                        <segue destination="eAg-Tx-B1a" kind="relationship" relationship="viewControllers" id="z7R-N0-Dav"/>
+                        <segue destination="NX2-PQ-i9B" kind="relationship" relationship="viewControllers" id="Lzq-yo-amz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxH-al-DSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="moon" catalog="system" width="128" height="121"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
