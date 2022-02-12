@@ -33,4 +33,18 @@ class Modelo{
             print("no guardo", error.localizedDescription)
         }
     }
+    
+    func editData(titulo: String, nota: String, fecha:Date, notas: Notas){
+        let context = context()
+        notas.setValue(titulo, forKey: "titulo")
+        notas.setValue(nota, forKey: "nota")
+        notas.setValue(fecha, forKey: "fecha")
+        
+        do{
+            try context.save()
+            print("se edito")
+        }catch let error as NSError{
+            print("no edito", error.localizedDescription)
+        }
+    }
 }
